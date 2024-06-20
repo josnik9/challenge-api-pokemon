@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.06.18 a las 06:18:23 PM CST
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://apipokemon.io/challenges/technical-challenge">
+    <schemaBindings map="false">
+      <package name="soappokemonschemas"/>
+    </schemaBindings>
+    <bindings scd="tns:getAbilitiesRequest">
+      <class ref="soappokemonschemas.GetAbilitiesRequest"/>
+    </bindings>
+    <bindings scd="tns:getBaseExperienceRequest">
+      <class ref="soappokemonschemas.GetBaseExperienceRequest"/>
+    </bindings>
+    <bindings scd="tns:getHeldItemsRequest">
+      <class ref="soappokemonschemas.GetHeldItemsRequest"/>
+    </bindings>
+    <bindings scd="tns:getIdRequest">
+      <class ref="soappokemonschemas.GetIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getNameRequest">
+      <class ref="soappokemonschemas.GetNameRequest"/>
+    </bindings>
+    <bindings scd="tns:getLocationAreaEncountersRequest">
+      <class ref="soappokemonschemas.GetLocationAreaEncountersRequest"/>
+    </bindings>
+    <bindings scd="tns:getPokemonResponse">
+      <class ref="soappokemonschemas.GetPokemonResponse"/>
+    </bindings>
+    <bindings scd="~tns:pokemon">
+      <class ref="soappokemonschemas.Pokemon"/>
+    </bindings>
+    <bindings scd="~tns:pokemonAbility">
+      <class ref="soappokemonschemas.PokemonAbility"/>
+    </bindings>
+    <bindings scd="~tns:heldItem">
+      <class ref="soappokemonschemas.HeldItem"/>
+    </bindings>
+    <bindings scd="~tns:heldItemVersion">
+      <class ref="soappokemonschemas.HeldItemVersion"/>
+    </bindings>
+    <bindings scd="~tns:apiResource">
+      <class ref="soappokemonschemas.ApiResource"/>
+    </bindings>
+  </bindings>
+</bindings>
+

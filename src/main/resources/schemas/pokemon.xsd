@@ -1,0 +1,100 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://apipokemon.io/challenges/technical-challenge"
+           targetNamespace="http://apipokemon.io/challenges/technical-challenge" elementFormDefault="qualified">
+
+    <xs:element name="getAbilitiesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBaseExperienceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getHeldItemsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNameRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getLocationAreaEncountersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPokemonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemon" type="tns:pokemon"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="pokemon">
+        <xs:sequence>
+            <xs:element name="abilities" type="tns:pokemonAbility" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="baseExperience" type="xs:integer"/>
+            <xs:element name="heldItems" type="tns:heldItem" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="locationAreaEncounters" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pokemonAbility">
+        <xs:sequence>
+            <xs:element name="isHidden" type="xs:boolean"/>
+            <xs:element name="slot" type="xs:integer"/>
+            <xs:element name="ability" type="tns:apiResource"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="heldItem">
+        <xs:sequence>
+            <xs:element name="item" type="tns:apiResource"/>
+            <xs:element name="versionDetails" type="tns:heldItemVersion" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ability" type="tns:apiResource"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="heldItemVersion">
+        <xs:sequence>
+            <xs:element name="rarity" type="xs:integer"/>
+            <xs:element name="version" type="tns:apiResource"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="apiResource">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="url" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
