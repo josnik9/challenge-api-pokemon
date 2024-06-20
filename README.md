@@ -27,3 +27,16 @@ There are six methods:
 - getName
 
 All methods receive a pokemon's name
+
+### Data Base
+
+This project use H2 database, you can view the database in http://localhost:8080/h2-console/login.jsp.
+
+``` properties
+Driver Class: org.h2.Driver
+JDBC URL: jdbc:h2:mem:testdb
+username: sa
+password:
+```
+
+The table "request" saves: ip, method name and date of request.
